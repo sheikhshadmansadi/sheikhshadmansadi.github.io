@@ -88,6 +88,34 @@ footer{background:#061024;color:#aeb9c9;padding:28px 0;text-align:center;font-si
 }
 
   </style>
+
+<style>
+.service-page{display:none;min-height:75vh;padding:110px 20px 70px;background:linear-gradient(180deg,#f8fafc,#fff)}
+.service-page.active{display:block}
+.service-shell{max-width:1050px;margin:auto}
+.back-link{display:inline-flex;gap:8px;margin-bottom:25px;color:#9a7625;font-weight:700;text-decoration:none}
+.service-title{font-size:clamp(30px,5vw,52px);line-height:1.05;margin:0 0 12px}
+.service-subtitle{color:#64748b;max-width:760px;font-size:17px;line-height:1.7}
+.service-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;margin-top:35px}
+.service-card{background:#fff;border:1px solid #e5e7eb;border-radius:22px;padding:28px;box-shadow:0 14px 40px rgba(15,23,42,.07)}
+.service-card h3{margin-top:0}
+.service-form{display:grid;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.service-form label{font-weight:700;font-size:14px;color:#334155}
+.service-form input,.service-form select,.service-form textarea{width:100%;box-sizing:border-box;margin-top:7px;border:1px solid #cbd5e1;border-radius:12px;padding:13px 14px;font:inherit;background:#fff}
+.service-form textarea{min-height:120px;resize:vertical}
+.doc-list{display:grid;gap:11px;margin:18px 0 0}
+.doc-item{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;border-radius:12px;background:#f8fafc}
+.doc-item input{margin-top:3px}
+.primary-btn{border:0;border-radius:12px;padding:14px 18px;background:#0f172a;color:#fff;font-weight:800;cursor:pointer;font:inherit;text-decoration:none;display:inline-block}
+.secondary-btn{border:1px solid #cbd5e1;border-radius:12px;padding:12px 16px;background:#fff;color:#0f172a;font-weight:700;cursor:pointer;font:inherit;text-decoration:none;display:inline-block}
+.note{font-size:13px;color:#64748b;line-height:1.6}
+.success-box{display:none;text-align:center;padding:35px}
+.success-box.active{display:block}
+.service-result{margin-top:18px;padding:16px;border-radius:14px;background:#f8fafc;white-space:pre-wrap;font-size:14px;text-align:left}
+@media(max-width:800px){.service-grid,.form-row{grid-template-columns:1fr}.service-page{padding-top:95px}}
+</style>
+
 </head>
 <body>
 <nav>
@@ -103,6 +131,7 @@ footer{background:#061024;color:#aeb9c9;padding:28px 0;text-align:center;font-si
   <div class="container hero-grid">
     <div>
       <div class="eyebrow">Accounts • Audit • Professional Services</div>
+      <img src="sadi.jpg" alt="Sheikh Shadman Sadi" style="width:110px;height:110px;border-radius:50%;object-fit:cover;display:block;margin:0 0 20px;border:2px solid rgba(201,164,92,.7);">
       <h1>Sheikh Shadman Sadi</h1>
       <p class="lead">Junior Accountant, Audit Associate at Alam M. Zaman & Co., Chartered Accountants. Focused on accounting, audit support, financial reporting and professional working-paper preparation.</p>
       <div class="buttons">
@@ -136,6 +165,28 @@ footer{background:#061024;color:#aeb9c9;padding:28px 0;text-align:center;font-si
         <div class="fact"><strong>Professional role</strong><span>Junior Accountant, Audit Associate</span></div>
         <div class="fact"><strong>Firm</strong><span>Alam M. Zaman & Co.</span></div>
         <div class="fact"><strong>Coverage</strong><span>Dhaka & Chattogram</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="who-we-are">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Who We Are</div>
+      <h2>Professional accounting and audit support built on accuracy and integrity.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>We are a professional accounting and audit support profile focused on delivering accurate, structured and reliable financial and audit-related services. With practical experience in accounting, audit procedures, financial reporting and working-paper preparation, we support businesses in maintaining organized financial information and effective documentation.</p>
+        <p style="margin-top:18px">Our work covers accounting and bookkeeping, audit support, financial statement preparation, audit working papers, tax and VAT-related documentation, reconciliations and financial analysis.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>Our approach</strong><span>Accuracy, confidentiality and professional integrity</span></div>
+        <div class="fact"><strong>Our focus</strong><span>Clear documentation and reliable financial information</span></div>
+        <div class="fact"><strong>Our coverage</strong><span>Professional support in Dhaka &amp; Chattogram</span></div>
+        <div class="fact"><strong>Our objective</strong><span>Practical accounting, audit and compliance support</span></div>
       </div>
     </div>
   </div>
@@ -209,7 +260,7 @@ footer{background:#061024;color:#aeb9c9;padding:28px 0;text-align:center;font-si
       </div>
     </div>
     <div class="qr-box">
-       <img src="qrcode.svg" alt="QR Code" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; display: block; margin: 0 auto 10px;">
+      <div class="qr-placeholder">QR</div>
       <h3>Scan to save contact</h3>
       <p style="font-size:13px;color:#687286;margin-top:6px">Replace this placeholder with your vCard QR code before publishing.</p>
     </div>
@@ -219,5 +270,135 @@ footer{background:#061024;color:#aeb9c9;padding:28px 0;text-align:center;font-si
 <footer>
   © 2026 Sheikh Shadman Sadi · Accounts & Audit
 </footer>
+
+<section id="service-request" class="service-page">
+  <div class="service-shell">
+    <a href="#services" class="back-link" onclick="closeServiceRequest();return false;">← Back to Services</a>
+    <div class="eyebrow">Service Request</div>
+    <h1 class="service-title" id="serviceTitle">Service</h1>
+    <p class="service-subtitle" id="serviceIntro">Tell us what you need and the supporting documents you can provide.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <form id="requestForm" class="service-form" onsubmit="submitServiceRequest(event)">
+          <input type="hidden" id="selectedService" name="selectedService">
+          <div class="form-row">
+            <label>Your Name<input name="name" required placeholder="Enter your name"></label>
+            <label>Phone / WhatsApp<input name="phone" required placeholder="+880..."></label>
+          </div>
+          <label>Email (optional)<input type="email" name="email" placeholder="you@example.com"></label>
+          <label>What type of service do you need?
+            <select id="serviceType" name="serviceType" required><option value="">Select service type</option></select>
+          </label>
+          <label>Tell us about your requirement
+            <textarea name="details" placeholder="Briefly describe your business, period, requirement, or issue..."></textarea>
+          </label>
+          <div>
+            <label>Supporting documents you can provide</label>
+            <div id="docList" class="doc-list"></div>
+            <p class="note">Select the documents you currently have. Do not provide passwords, payment-card details, or other unnecessary sensitive information.</p>
+          </div>
+          <button class="primary-btn" type="submit">Prepare Service Request</button>
+        </form>
+        <div id="requestSuccess" class="success-box">
+          <div class="eyebrow">Request Prepared</div>
+          <h2>Your service request is ready.</h2>
+          <p class="note">Choose Email or WhatsApp to send the request.</p>
+          <div id="requestSummary" class="service-result"></div>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px">
+            <a id="emailRequest" class="primary-btn" href="#">Send by Email</a>
+            <a id="whatsappRequest" class="secondary-btn" href="#" target="_blank" rel="noopener">Send by WhatsApp</a>
+            <button class="secondary-btn" type="button" onclick="openServiceRequest(document.getElementById('selectedService').value)">Edit Request</button>
+          </div>
+        </div>
+      </div>
+      <aside class="service-card">
+        <h3>How it works</h3>
+        <div class="doc-list">
+          <div class="doc-item"><strong>01</strong><span>Select the exact service type.</span></div>
+          <div class="doc-item"><strong>02</strong><span>Tell us briefly what you need.</span></div>
+          <div class="doc-item"><strong>03</strong><span>Select the supporting documents you can provide.</span></div>
+          <div class="doc-item"><strong>04</strong><span>Send the prepared request by Email or WhatsApp.</span></div>
+        </div>
+        <p class="note" style="margin-top:20px">Your request can then be reviewed and the appropriate scope and next steps can be discussed.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<script>
+const serviceInfo = {
+ "Accounting & Bookkeeping": {
+  types:["Monthly bookkeeping","Ledger & journal review","Bank reconciliation","Accounts payable / receivable","Other accounting support"],
+  docs:["Trial balance / ledger","Bank statements","Sales & purchase records","Previous financial statements (if available)","Other relevant accounting documents"]
+ },
+ "Audit Support": {
+  types:["Statutory audit support","Audit documentation","Audit evidence preparation","Confirmation / reconciliation support","Other audit support"],
+  docs:["Trial balance","General ledger","Bank statements","Invoices / vouchers","Financial statements / draft accounts","Other audit supporting documents"]
+ },
+ "Financial Statements": {
+  types:["Financial statement preparation","Notes to financial statements","Statement reconciliation","Year-end closing support","Other reporting support"],
+  docs:["Trial balance","General ledger","Fixed asset schedule","Bank statements","Receivable & payable schedules","Prior-year financial statements"]
+ },
+ "Working Papers": {
+  types:["Audit working papers","Lead schedules","Substantive testing schedules","Risk & control documentation","Other working-paper support"],
+  docs:["Trial balance","General ledger","Supporting schedules","Invoices / vouchers","Contracts / agreements","Previous audit working papers (if available)"]
+ },
+ "Tax & VAT Support": {
+  types:["Income tax support","VAT return support","Tax computation","VAT reconciliation","Tax/VAT documentation","Other tax & VAT support"],
+  docs:["Tax return / computation","VAT returns","Sales & purchase statements","Tax deduction / withholding records","Challan / payment evidence","Other tax/VAT documents"]
+ },
+ "Financial Analysis": {
+  types:["Ratio analysis","Profitability analysis","Cash flow analysis","Budget vs actual analysis","Management reporting","Other financial analysis"],
+  docs:["Financial statements","Trial balance","Budget / forecast","Monthly management accounts","Bank statements","Other financial data"]
+ }
+};
+
+function openServiceRequest(service){
+ document.querySelectorAll("body > section").forEach(s=>{if(s.id!=="service-request")s.style.display="none";});
+ const p=document.getElementById("service-request"); p.classList.add("active"); p.style.display="block";
+ document.getElementById("selectedService").value=service;
+ document.getElementById("serviceTitle").textContent=service;
+ document.getElementById("serviceIntro").textContent="Tell us what you need and select the supporting documents you can provide.";
+ const info=serviceInfo[service]||{types:["Other"],docs:["Other supporting documents"]};
+ document.getElementById("serviceType").innerHTML='<option value="">Select service type</option>'+info.types.map(x=>'<option>'+x+'</option>').join("");
+ document.getElementById("docList").innerHTML=info.docs.map(x=>'<label class="doc-item"><input type="checkbox" name="documents" value="'+x+'"><span>'+x+'</span></label>').join("");
+ document.getElementById("requestForm").style.display="grid";
+ document.getElementById("requestSuccess").classList.remove("active");
+ location.hash="service-request"; window.scrollTo({top:0,behavior:"smooth"});
+}
+function closeServiceRequest(){
+ document.getElementById("service-request").style.display="none";
+ document.getElementById("service-request").classList.remove("active");
+ document.querySelectorAll("body > section").forEach(s=>{if(s.id!=="service-request")s.style.display="";});
+ location.hash="services";
+}
+function submitServiceRequest(e){
+ e.preventDefault();
+ const f=new FormData(e.target);
+ const docs=[...document.querySelectorAll('input[name="documents"]:checked')].map(x=>x.value);
+ const summary="Service: "+f.get("selectedService")+"\nService type: "+f.get("serviceType")+"\nName: "+f.get("name")+"\nPhone/WhatsApp: "+f.get("phone")+"\nEmail: "+(f.get("email")||"Not provided")+"\nSupporting documents available: "+(docs.length?docs.join(", "):"None selected")+"\nRequirement: "+(f.get("details")||"Not provided");
+ document.getElementById("requestSummary").textContent=summary;
+ document.getElementById("requestForm").style.display="none";
+ document.getElementById("requestSuccess").classList.add("active");
+ document.getElementById("emailRequest").href="mailto:sksadi6251@gmail.com?subject="+encodeURIComponent("Service Request - "+f.get("selectedService"))+"&body="+encodeURIComponent(summary);
+ document.getElementById("whatsappRequest").href="https://wa.me/8801879499385?text="+encodeURIComponent(summary);
+}
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+ const names=Object.keys(serviceInfo);
+ document.querySelectorAll("h3,h4,a,button").forEach(el=>{
+  const n=names.find(x=>el.textContent.trim()===x);
+  if(n && !el.dataset.serviceBound){
+   el.dataset.serviceBound="1"; el.style.cursor="pointer";
+   el.addEventListener("click",ev=>{ev.preventDefault();openServiceRequest(n);});
+  }
+ });
+});
+</script>
+
 </body>
 </html>
